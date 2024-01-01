@@ -1,6 +1,6 @@
 # Docker DLC ⚡
 
-Dockerfile library for DLCs
+Docker source for DLCs
 
 ## Core functions
 
