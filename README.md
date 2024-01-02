@@ -9,3 +9,12 @@ Docker source for DLCs
 - Sign
 - Bitcoin Core
 - UTXO 
+
+## Roadmap
+
+- [ ] Core functions
+- [ ] Lightning integration
+- [ ] Taproot
+- [ ] Default for Bitcoin Core
+- [ ] FOSS
+- [ ] Release in Beta
