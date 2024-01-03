@@ -4,3 +4,5 @@
 dlc create -a <oracle_address> -f <fund_amount> -p <pubkey> -r <rvalue> -s <contract_size> -d <dlc_output_file>
 
 # Other DLC-related commands...
+
+dlc create -a <oracle_info>
