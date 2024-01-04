@@ -12,7 +12,7 @@ Docker source for DLCs
 
 ## Roadmap
 
-- [ ] Core functions
+- [x] Core functions
 - [ ] Lightning integration
 - [ ] Taproot
 - [ ] Default for Bitcoin Core
