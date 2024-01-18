@@ -18,4 +18,6 @@ Docker source for DLCs
 - [ ] Default for Bitcoin Core
 - [ ] FOSS
 - [ ] Release in Beta
+- [ ] Testnet
+- [ ] Mainnet
 - [ ] Import modules from LN and Bitcoin docker
