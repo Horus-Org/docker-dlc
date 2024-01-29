@@ -1,3 +1,5 @@
 ## DLC library
 
-TBD
+- Bitcoin
+- Lightning
+- DLCs
