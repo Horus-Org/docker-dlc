@@ -8,7 +8,8 @@ Docker source for DLCs
 - Oracle
 - Sign
 - Bitcoin Core
-- UTXO 
+- UTXO
+- Server
 
 ## Roadmap
 
