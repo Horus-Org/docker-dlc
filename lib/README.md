@@ -2,4 +2,4 @@
 
 - Bitcoin
 - Lightning
-- DLCs
+- DLCs (Oracle, UTXO, Multisig)
