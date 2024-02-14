@@ -9,3 +9,4 @@ dlc create -a <oracle_info>
 dlc create -a <oracle_utxo>
 dlc create -a <multsig>
 dlc create -a <txo>
+dlc create -a <getinfo>
