@@ -1,3 +1,4 @@
+import pubkey as bitcoin
 
 # Define a function to calculate the payout based on the oracle's outcome
 def calculate_payout(contract, oracle_outcome):
