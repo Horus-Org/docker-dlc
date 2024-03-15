@@ -11,8 +11,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the DLC logic file into the container
-COPY dlc_logic.py .
+COPY pypi-dlc.py .
 
 # Run the DLC logic script
-CMD ["python", "dlc_logic.py"]
+CMD ["python", "pypi-dlc.py"]
 
