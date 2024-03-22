@@ -1,4 +1,4 @@
-## DLC library
+## DLC library ⚡
 
 - Bitcoin
 - Lightning
