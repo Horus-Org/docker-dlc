@@ -16,7 +16,7 @@ Docker source for DLCs
 - [x] Core functions
 - [ ] Lightning integration
 - [ ] Taproot
-- [ ] Default for Bitcoin Core
+- [x] Default for Bitcoin Core
 - [ ] FOSS
 - [ ] Release in Beta
 - [ ] Testnet
