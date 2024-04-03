@@ -14,5 +14,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY pypi-dlc.py .
 
 # Run the DLC logic script
-CMD ["python", "pypi-dlc.py"]
+CMD [ "pypi-dlc.py"]
 
