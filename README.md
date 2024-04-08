@@ -25,3 +25,7 @@ Docker source for DLCs
 - [ ] APIs
 - [ ] RBF
 - [ ] Feedback 
+
+## Complement repository
+
+You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/awning)
