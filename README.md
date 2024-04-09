@@ -10,6 +10,7 @@ Docker source for DLCs
 - Bitcoin Core
 - UTXO
 - Server
+- RPC
 
 ## Roadmap
 
