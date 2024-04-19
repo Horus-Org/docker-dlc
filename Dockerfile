@@ -1,8 +1,6 @@
 # Use Python base image
 FROM python:3.8-slim
 
-CMD [ "pypi-dlc.py"]
-
 # Define the base image for the build stage
 FROM debian:stable-slim as builder
 
@@ -83,7 +81,6 @@ RUN mkdir -p "$HOME/.bitcoin/"
 # Set the entrypoint to the bitcoind daemon
 ENTRYPOINT ["bitcoind"]
 
-
 # Set work directory
 WORKDIR /app
 
@@ -97,5 +94,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY pypi-dlc.py .
 
 # Run the DLC logic script
-CMD [ "pypi-dlc.py"]
+CMD ["python", "pypi-dlc.py"]
 
