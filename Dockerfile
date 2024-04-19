@@ -7,8 +7,8 @@ CMD [ "pypi-dlc.py"]
 FROM debian:stable-slim as builder
 
 # Set ARGs for build-time variables
-ARG VERSION=dont-success-cat
-ARG REPO_URL=https://github.com/rot13maxi/bitcoin.git
+ARG VERSION=27.0
+ARG REPO_URL=https://github.com/bitcoin/bitcoin.git
 
 # Install build dependencies
 RUN apt-get update && apt-get install -y \
