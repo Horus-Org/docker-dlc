@@ -4,7 +4,7 @@ Docker source for DLCs
 
 ## Core functions
 
-- Lightning Network
+- Lightning Network (LDK, CLN, Eclair and LND)
 - Oracle
 - Sign
 - Bitcoin Core
