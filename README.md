@@ -23,7 +23,7 @@ Docker source for DLCs
 - [x] Testnet
 - [x] Mainnet
 - [x] Import modules from LN and Bitcoin docker
-- [ ] APIs
+- [x] APIs
 - [ ] RBF
 - [ ] Feedback 
 
