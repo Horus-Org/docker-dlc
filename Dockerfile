@@ -7,6 +7,7 @@ FROM debian:stable-slim as builder
 # Set ARGs for build-time variables
 ARG VERSION=27.0
 ARG REPO_URL=https://github.com/bitcoin/bitcoin.git
+ARG DLC_VERSION=0.1.0
 
 # Install build dependencies
 RUN apt-get update && apt-get install -y \
