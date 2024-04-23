@@ -18,7 +18,7 @@ RUN wget https://bitcoincore.org/bin/bitcoin-core-${BITCOIN_VERSION}/bitcoin-${B
     && rm -rf bitcoin-${BITCOIN_VERSION} bitcoin-${BITCOIN_VERSION}-x86_64-linux-gnu.tar.gz
 
 # Install DLC
-RUN wget https://github.com/discreetlogcontracts/dlc/releases/download/v${DLC_VERSION}/dlc-linux-${DLC_VERSION}.tar.gz \
+RUN wget https://github.com/docker-dlc/docker-dlc/releases/download/v${DLC_VERSION}/dlc-linux-${DLC_VERSION}.tar.gz \
     && tar -xvf dlc-linux-${DLC_VERSION}.tar.gz \
     && mv dlc-linux-${DLC_VERSION}/dlc /usr/local/bin/dlc \
     && rm -rf dlc-linux-${DLC_VERSION}.tar.gz dlc-linux-${DLC_VERSION}
