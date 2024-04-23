@@ -56,7 +56,7 @@ RUN make install DESTDIR=/bitcoin-dist
 # Start the final stage for a smaller, cleaner image
 FROM debian:stable-slim
 
-# Install runtime dependencies, cleanup and create linux user bitcoin
+# Install runtime dependencies
 RUN apt-get update && apt-get install -y \
   libboost-system-dev \
   libboost-filesystem-dev \
@@ -95,4 +95,3 @@ COPY pypi-dlc.py .
 
 # Run the DLC logic script
 CMD ["python", "pypi-dlc.py"]
-
