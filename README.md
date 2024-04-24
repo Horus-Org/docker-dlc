@@ -2,7 +2,7 @@
 
 Docker source for DLCs
 
-## Core functions
+### Core functions
 
 - Lightning Network (LDK, CLN, Eclair and LND)
 - Oracle
@@ -11,6 +11,10 @@ Docker source for DLCs
 - UTXO
 - Server
 - RPC
+
+### Complement repository
+
+You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/awning)
 
 ## Roadmap
 
@@ -26,7 +30,3 @@ Docker source for DLCs
 - [x] APIs
 - [ ] RBF
 - [ ] Feedback 
-
-## Complement repository
-
-You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/awning)
