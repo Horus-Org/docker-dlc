@@ -29,4 +29,5 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [x] Import modules from LN and Bitcoin docker
 - [x] APIs
 - [ ] RBF
-- [ ] Feedback 
+- [ ] Feedback
+- [ ] Release out of beta
