@@ -30,4 +30,5 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [x] APIs
 - [ ] RBF
 - [ ] Feedback
+- [ ] BOLT12
 - [ ] Release out of beta
