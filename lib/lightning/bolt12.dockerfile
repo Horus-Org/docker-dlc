@@ -1,1 +1,3 @@
+//!bin
 
+$ lightningcli bolt12
