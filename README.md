@@ -11,6 +11,8 @@ Docker source for DLCs
 - UTXO
 - Server
 - RPC
+- DLCs
+
 
 ### Complement repository
 
