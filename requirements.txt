@@ -1,6 +1,2 @@
 bitcoin==1.1.15
-lnurl==0.5.1
-itsdangerous==0.24
-jsonschema==2.4.0
-python-bitcoinaddress==0.2.2
-2
+
