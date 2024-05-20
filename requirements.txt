@@ -1,0 +1,2 @@
+bitcoinlib=0.6.15
+cfd-dlc=0.0.8
