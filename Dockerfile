@@ -7,6 +7,8 @@ FROM debian:stable-slim as builder
 # Set ARGs for build-time variables
 ARG VERSION=27.0
 ARG REPO_URL=https://github.com/bitcoin/bitcoin.git
+ARG REPO_URL=https://github.com/bitcoinknots/bitcoin.git
+ARG VERSION=26.1.knots20240513
 ARG DLC_VERSION=0.1.0
 
 # Install build dependencies
