@@ -1,3 +1,5 @@
-//!bin
+FROM lightningcli bin
+FROM baseImage
 
-$ lightningcli bolt12
+ FROM lightningcli decode
+
