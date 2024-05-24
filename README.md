@@ -30,6 +30,7 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [x] Mainnet
 - [x] Import modules from LN and Bitcoin docker
 - [x] APIs
+- [ ] LND, CLN and Eclair
 - [ ] RBF
 - [ ] Full RBF
 - [ ] Feedback
