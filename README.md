@@ -12,6 +12,7 @@ Docker source for DLCs
 - Server
 - RPC
 - DLCs
+- Payments support
 
 
 ### Complement repository
