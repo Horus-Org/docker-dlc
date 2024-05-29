@@ -39,4 +39,5 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [ ] BOLT11
 - [ ] Release out of beta
 - [ ] Testnet4
+- [ ] Mutinynet
 - [x] Bitcoin Knots
