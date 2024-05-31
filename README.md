@@ -41,3 +41,4 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [ ] Testnet4
 - [ ] Mutinynet
 - [x] Bitcoin Knots
+- [ ] Rust DLC
