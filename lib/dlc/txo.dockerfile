@@ -10,3 +10,4 @@ dlc create -a <oracle_utxo>
 dlc create -a <multsig>
 dlc create -a <txo>
 dlc create -a <getinfo>
+dlc create -a <oracle_price>
