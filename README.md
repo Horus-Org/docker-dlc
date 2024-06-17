@@ -2,6 +2,8 @@
 
 Docker source for DLCs
 
+ ⚠️**Don't use for mainnet**
+
 ### Core functions
 
 - Lightning Network (LDK, CLN, Eclair and LND)
