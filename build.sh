@@ -1,4 +1,1 @@
-docker build -t dlc-logic                      
-docker build dlc-logic
-docker run dlc-logic
-docker run restart
+run -p 8080:8080 -d -t -i -v $PWD:/app -w /app node:12-alpine npm run start
