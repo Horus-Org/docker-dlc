@@ -1,7 +1,8 @@
 [package]
+
 name = "Docker_DLC"
 version = "1.0.0"
 
 [dependencies]
-python = { version = "0.1.0", path = "../.." }
-dlc = { version = "0.4.0", path = "../.." }
+
+dlc = { version = "0.4.0", path = "../dlc" }
