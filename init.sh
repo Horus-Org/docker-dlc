@@ -11,3 +11,5 @@ $ dlc utxo
 
 ## lightning contract
 $ dlc script
+$ dlc utxo
+$ lightning invoice
