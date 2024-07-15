@@ -1,9 +1,9 @@
 extern use crate::dlc::DLC;
 extern use crate::dlc::DLCBuilder;
-extern use crate::dlc::RPC
+extern use crate::dlc::RPC;
 extern use crate::dlc::DLCBuilderError;
-extern use create::Oracle;
-extern use create::OracleBuilder;
+extern use crate::Oracle;
+extern use crate::OracleBuilder;
 
 impl Oracle {
     pub fn new() -> OracleBuilder {
