@@ -1,2 +1,2 @@
-FROM node:14.21.3-alpine
+FROM node:20.15.1-alpine
 FROM api-firewall-gateway:latest
