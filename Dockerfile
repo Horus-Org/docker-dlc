@@ -1,5 +1,5 @@
 # Use Python base image
-FROM python:3.8-slim
+FROM python:3.12-slim
 
 # Define the base image for the build stage
 FROM debian:stable-slim as builder
