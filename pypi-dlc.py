@@ -2,6 +2,7 @@ import pubkey as bitcoin
 import hashlib
 import base64
 import oracle as cfc_dlc
+import json
 
 # Define a function to calculate the contract's payout address
 def calculate_payout_address(contract):
