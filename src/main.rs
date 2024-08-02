@@ -1,5 +1,10 @@
-use crate::DLCMessage::{DLC, DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
+extern use crate::DLCMessage::{DLC, DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
 
+fn DLCMessage::DlcMessage {
+    pub fn new() -> DLCMessage {
+        DLCMessage::new()
+    }
+}
 
 impl Oracle {
     pub fn new() -> OracleBuilder {
