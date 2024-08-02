@@ -1,10 +1,32 @@
-extern use crate::DLCMessage::{DLC, DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
+use crate::DockerDLC::DockerDLC;
+use crate::DLCMessage::{DLC, DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
 
-fn DLCMessage::DlcMessage {
-    pub fn new() -> DLCMessage {
-        DLCMessage::new()
+
+
+// Define the `DLCMessage` module
+mod DLCMessage {
+    // Define the `DLCMessage` struct
+    pub struct DLCMessage {
+        // Add fields here if needed
+    }
+
+    // Implement methods for the `DLCMessage` struct
+    impl DLCMessage {
+        // Define the `new` method
+        pub fn new() -> Self {
+            DLCMessage {
+                // Initialize fields here if needed
+            }
+        }
     }
 }
+
+// Example usage
+fn main() {
+    // Create a new `DLCMessage` instance
+    let message = DLCMessage::DLCMessage::new();
+}
+
 
 impl Oracle {
     pub fn new() -> OracleBuilder {
