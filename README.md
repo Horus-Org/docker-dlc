@@ -28,6 +28,7 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [ ] Taproot
 - [x] Default for Bitcoin Core
 - [ ] FOSS
+- [ ] Breez SDK compatibility
 - [ ] Release in Beta
 - [x] Testnet
 - [x] Mainnet
@@ -42,6 +43,6 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [ ] Testnet4
 - [ ] Mutinynet
 - [x] Bitcoin Knots
-- [ ] Rust DLC
+- [x] Rust DLC
 - [ ] Docker package
 - [ ] Beta 
