@@ -1,0 +1,7 @@
+/sysroot/home/rafael/Documents/DLC docker/docker-dlc/target/debug/deps/libsecp256k1_zkp_sys-789935eac16355ff.rmeta: /sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/lib.rs /sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/error_callbacks.rs /sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/zkp.rs
+
+/sysroot/home/rafael/Documents/DLC docker/docker-dlc/target/debug/deps/secp256k1_zkp_sys-789935eac16355ff.d: /sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/lib.rs /sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/error_callbacks.rs /sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/zkp.rs
+
+/sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/lib.rs:
+/sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/error_callbacks.rs:
+/sysroot/home/rafael/.var/app/com.vscodium.codium/data/cargo/registry/src/index.crates.io-6f17d22bba15001f/secp256k1-zkp-sys-0.8.1/src/zkp.rs:
