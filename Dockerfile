@@ -1,5 +1,5 @@
 # Use Rust base image
-FROM rust:1.80.0 as rust
+FROM rust:1.80.1 as rust
 
 # Use Rust DLC & Lightning base image
 
