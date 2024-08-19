@@ -36,8 +36,6 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [x] APIs
 - [ ] LND, CLN and Eclair
 - [ ] RBF
-- [ ] Full RBF
-- [ ] Feedback
 - [ ] BOLT12
 - [ ] BOLT11
 - [ ] Testnet4
@@ -45,4 +43,3 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [x] Bitcoin Knots
 - [x] Rust DLC
 - [ ] Docker package
-- [ ] Beta 
