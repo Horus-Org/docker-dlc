@@ -6,6 +6,8 @@
 - Phython
 - Docker
 - CFD-DLC
+- Rust DLC
+- Rust
 
 ## Steps
 
