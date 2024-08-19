@@ -1,7 +1,12 @@
-use crate::DLCMessage::DLC;use crate::DLCMessage::{DLC, DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
+use crate::DLCMessage::DLCMessage;
+use crate::{DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
 
 
-
+// Define DLC Builder
+#[warn(dead_code)]
+pub struct DLCBuilder {
+    // Add fields here if needed
+}
 // Define the `DLCMessage` module
 mod DLCMessage {
     // Define the `DLCMessage` struct
