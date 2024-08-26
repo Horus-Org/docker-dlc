@@ -29,7 +29,7 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [x] Default for Bitcoin Core
 - [ ] FOSS
 - [ ] Breez SDK compatibility
-- [ ] Release in Beta
+- [ ] Release in Beta 2024
 - [x] Testnet
 - [x] Mainnet
 - [x] Import modules from LN and Bitcoin docker
