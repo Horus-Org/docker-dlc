@@ -73,21 +73,23 @@ fn test_oracle() {
     let _oracle = oracle_builder.build().unwrap();
     println!("Oracle created successfully");
 }
-
 fn test_dlc() {
     let dlc_builder = DLC::new();
-    let dlc = dlc_builder.build().expect("Failed to build DLC");
+    // Ensure the build method returns a Result type
+    let dlc = dlc_builder.build().unwrap();
     println!("DLC created successfully");
 }
 
 fn test_dlc_builder() {
     let dlc_builder = DLC::new();
-    let dlc = dlc_builder.build().expect("Failed to build DLC");
+    // Ensure the build method returns a Result type
+    let dlc = dlc_builder.build().unwrap();
     println!("DLC created successfully");
 }
 
 fn test_oracle_builder() {
     let oracle_builder = Oracle::new();
-    let oracle = oracle_builder.build().unwrap();
+    // Ensure the build method returns a Result type
+    let _oracle = oracle_builder.build().expect("Failed to build Oracle");
     println!("Oracle created successfully");
 }
