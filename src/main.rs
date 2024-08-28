@@ -1,6 +1,5 @@
 // Import the DLCMessage struct from the DLCMessage module
-use crate::dlc_messages::{Channel, OracleMessages, SegmentReader};
-
+use dlc_messages::{Channel, OracleMessages, SegmentReader};
 // Define DLC Builder
 #[warn(dead_code)]
 pub struct DLCBuilder {
@@ -17,7 +16,7 @@ impl DLCBuilder {
 
     // Define the build method (stub)
     pub fn build(self) -> Result<DLC, DLCBuilderError> {
-        Ok(DLC::new())
+        Ok(DLC)
     }
 }
 
@@ -71,19 +70,19 @@ fn main() {
 
 fn test_oracle() {
     let oracle_builder = Oracle::new();
-    let oracle = oracle_builder.build().unwrap();
+    let _oracle = oracle_builder.build().unwrap();
     println!("Oracle created successfully");
 }
 
 fn test_dlc() {
     let dlc_builder = DLC::new();
-    let dlc = dlc_builder.build().unwrap();
+    let dlc = dlc_builder.build().expect("Failed to build DLC");
     println!("DLC created successfully");
 }
 
 fn test_dlc_builder() {
     let dlc_builder = DLC::new();
-    let dlc = dlc_builder.build().unwrap();
+    let dlc = dlc_builder.build().expect("Failed to build DLC");
     println!("DLC created successfully");
 }
 
