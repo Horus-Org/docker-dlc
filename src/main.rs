@@ -4,7 +4,6 @@ use crate::DLCMessage::DLCMessage;
 // Import the DLCBuilder, DLCBuilderError, Oracle, and OracleBuilder from the current crate
 use crate::{DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
 
-
 // Define DLC Builder
 #[warn(dead_code)]
 pub struct DLCBuilder {
@@ -17,6 +16,11 @@ impl DLCBuilder {
         DLCBuilder {
             // Initialize fields here if needed
         }
+    }
+
+    // Define the build method (stub)
+    pub fn build(self) -> Result<DLC, DLCBuilderError> {
+        Ok(DLC::new())
     }
 }
 
@@ -48,19 +52,6 @@ pub struct DLCBuilderError;
 impl DLC {
     pub fn new() -> DLCBuilder {
         DLCBuilder::new()
-    }
-}
-
-impl DLCBuilder {
-    pub fn new() -> Self {
-        DLCBuilder {
-            // Initialize fields here if needed
-        }
-    }
-
-    // Define the build method (stub)
-    pub fn build(self) -> Result<DLC, DLCBuilderError> {
-        Ok(DLC)
     }
 }
 
