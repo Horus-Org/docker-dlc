@@ -3,6 +3,7 @@
 Docker source for DLCs
 
  ⚠️**Don't use for mainnet**
+ ⚠️**Beta and WIP**
 
 ### Core functions
 
@@ -23,4 +24,4 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 
 ## Roadmap
 
-- [ ] Release in Beta 2024
+- [x] Release in Beta 2024
