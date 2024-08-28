@@ -1,11 +1,13 @@
 
 # Command to create a DLC contract over LN
-dlc create -a <oracle_address> -f <fund_amount> -p <pubkey> -r <rvalue> -s <contract_size> -d <dlc_output_file>
+FROM your_dlc_image
+
+RUN dlc create -a <oracle_address> -f <fund_amount> -p <pubkey> -r <rvalue> -s <contract_size> -d <dlc_output_file>
 
 # Other DLC-related commands...
 
-dlc create -a <oracle_info>
-dlc create -a <oracle_utxo>
-dlc create -a <multsig>
-dlc create -a <open_channel>
-dlc create -a <close_channel>
+RUN  create -a <oracle_info>
+RUN  create -a <oracle_utxo>
+RUN  create -a <multsig>
+RUN create -a <open_channel>
+RUN create -a <close_channel>

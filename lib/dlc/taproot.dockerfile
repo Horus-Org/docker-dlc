@@ -5,17 +5,17 @@ FROM cfd-dlc
 FROM --platform=arm64 rust-dlc
 
 # Command to create a DLC contract
-dlc create -a <oracle_address> -f <fund_amount> -p <pubkey> -r <rvalue> -s <contract_size> -d <dlc_output_file>
+RUN dlc create -a <oracle_address> -f <fund_amount> -p <pubkey> -r <rvalue> -s <contract_size> -d <dlc_output_file>
 
 # Other DLC-related commands...
 
-dlc create -a <oracle_info>
-dlc create -a <oracle_utxo>
-dlc create -a <multsig>
+RUN DLC create -a <oracle_info>
+RUN  DLC  create -a <oracle_utxo>
+RUN DLC create -a <multsig>
 
-dlc list
-dlc list -a <oracle_address>
-dlc list -a <oracle_utxo>
-dlc list -a <multsig>
+RUN dlclist
+RUN DLC list -a <oracle_address>
+RUN DLC list -a <oracle_utxo>
+RUN DLC list -a <multsig>
 
-dlc show <dlc_id>
+RUN dlc show <dlc_id>

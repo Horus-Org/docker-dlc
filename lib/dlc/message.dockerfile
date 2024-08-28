@@ -1,4 +1,6 @@
-CLI for DLC
-CLI for oracle_address
-CLI for message
+FROM alpine:latest
+
+RUN CLI for DLC
+RUN CLI for oracle_address
+RUN CLI for message
 
