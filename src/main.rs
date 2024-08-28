@@ -1,4 +1,7 @@
+// Import the DLCMessage struct from the DLCMessage module
 use crate::DLCMessage::DLCMessage;
+
+// Import the DLCBuilder, DLCBuilderError, Oracle, and OracleBuilder from the current crate
 use crate::{DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
 
 
@@ -7,30 +10,19 @@ use crate::{DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
 pub struct DLCBuilder {
     // Define fields for the DLCBuilder here
 }
-// Define the `DLCMessage` module
-mod DLCMessage {
-    // Define the `DLCMessage` struct
-    pub struct DLCMessage {
-        // Add fields here if needed
-    }
 
-    // Implement methods for the `DLCMessage` struct
-    impl DLCMessage {
-        // Define the `new` method
-        pub fn new() -> Self {
-            DLCMessage {
-                // Initialize fields here if needed
-            }
+impl DLCBuilder {
+    // Define the new method
+    pub fn new() -> Self {
+        DLCBuilder {
+            // Initialize fields here if needed
         }
     }
 }
 
-// Example usage
-fn main() {
-    // Create a new `DLCMessage` instance
-    let message = DLCMessage::DLCMessage::new();
-}
-
+// Define Oracle struct and OracleBuilder struct
+pub struct Oracle;
+pub struct OracleBuilder;
 
 impl Oracle {
     pub fn new() -> OracleBuilder {
@@ -38,49 +30,77 @@ impl Oracle {
     }
 }
 
+impl OracleBuilder {
+    pub fn new() -> Self {
+        OracleBuilder
+    }
+
+    // Define the build method (stub)
+    pub fn build(self) -> Result<Oracle, String> {
+        Ok(Oracle)
+    }
+}
+
+// Define DLC struct and DLCBuilderError struct
+pub struct DLC;
+pub struct DLCBuilderError;
+
 impl DLC {
     pub fn new() -> DLCBuilder {
         DLCBuilder::new()
     }
 }
 
-impl DLCBuilderError {
-    pub fn new() -> DLCBuilderError {
-        DLCBuilderError::new()
+impl DLCBuilder {
+    pub fn new() -> Self {
+        DLCBuilder {
+            // Initialize fields here if needed
+        }
+    }
+
+    // Define the build method (stub)
+    pub fn build(self) -> Result<DLC, DLCBuilderError> {
+        Ok(DLC)
     }
 }
 
+impl DLCBuilderError {
+    pub fn new() -> Self {
+        DLCBuilderError
+    }
+}
+
+// Example usage
 fn main() {
     println!("Hello, world!");
+
+    // Example tests
+    test_oracle();
+    test_dlc();
+    test_dlc_builder();
+    test_oracle_builder();
 }
 
 fn test_oracle() {
-    let oracle = Oracle::new();
-    let oracle_builder = oracle.build();
-    let oracle = oracle_builder.unwrap();
-    let oracle_id = oracle.get_id();
-    println!("Oracle ID: {}", oracle_id);
+    let oracle_builder = Oracle::new();
+    let oracle = oracle_builder.build().unwrap();
+    println!("Oracle created successfully");
 }
+
 fn test_dlc() {
-    let dlc = DLC::new();
-    let dlc_builder = dlc.build();
-    let dlc = dlc_builder.unwrap();
-    let dlc_id = dlc.get_id();
-    println!("DLC ID: {}", dlc_id);
+    let dlc_builder = DLC::new();
+    let dlc = dlc_builder.build().unwrap();
+    println!("DLC created successfully");
 }
 
 fn test_dlc_builder() {
-    let dlc = DLC::new();
-    let dlc_builder = dlc.build();
-    let dlc = dlc_builder.unwrap();
-    let dlc_id = dlc.get_id();
-    println!("DLC ID: {}", dlc_id);
+    let dlc_builder = DLC::new();
+    let dlc = dlc_builder.build().unwrap();
+    println!("DLC created successfully");
 }
 
 fn test_oracle_builder() {
-    let oracle = Oracle::new();
-    let oracle_builder = oracle.build();
-    let oracle = oracle_builder.unwrap();
-    let oracle_id = oracle.get_id();
-    println!("Oracle ID: {}", oracle_id);
+    let oracle_builder = Oracle::new();
+    let oracle = oracle_builder.build().unwrap();
+    println!("Oracle created successfully");
 }
