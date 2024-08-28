@@ -1,7 +1,5 @@
 // Import the DLCMessage struct from the DLCMessage module
-use crate::DLCMessage;
-// Import the DLCBuilder, DLCBuilderError, Oracle, and OracleBuilder from the current crate
-use crate::{DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
+use crate::dlc_messages::{Channel, OracleMessages, SegmentReader};
 
 // Define DLC Builder
 #[warn(dead_code)]
