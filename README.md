@@ -23,23 +23,4 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 
 ## Roadmap
 
-- [x] Core functions
-- [ ] Lightning integration
-- [ ] Taproot
-- [x] Default for Bitcoin Core
-- [ ] FOSS
-- [ ] Breez SDK compatibility
 - [ ] Release in Beta 2024
-- [x] Testnet
-- [x] Mainnet
-- [x] Import modules from LN and Bitcoin docker
-- [x] APIs
-- [ ] LND, CLN and Eclair
-- [ ] RBF
-- [ ] BOLT12
-- [ ] BOLT11
-- [ ] Testnet4
-- [ ] Mutinynet
-- [x] Bitcoin Knots
-- [x] Rust DLC
-- [ ] Docker package
