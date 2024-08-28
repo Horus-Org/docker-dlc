@@ -1,6 +1,5 @@
 // Import the DLCMessage struct from the DLCMessage module
-use crate::DLCMessage::DLCMessage;
-
+use crate::DLCMessage;
 // Import the DLCBuilder, DLCBuilderError, Oracle, and OracleBuilder from the current crate
 use crate::{DLCBuilder, DLCBuilderError, Oracle, OracleBuilder};
 
