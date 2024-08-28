@@ -25,7 +25,7 @@ ARG VERSION=27.0
 ARG REPO_URL=https://github.com/bitcoin/bitcoin.git
 ARG REPO_URL=https://github.com/bitcoinknots/bitcoin.git
 ARG VERSION=27.1.knots20240801
-ARG DLC_VERSION=0.1.0
+ARG DLC_VERSION=0.1.0-beta
 
 # Install build dependencies
 RUN apt-get update && apt-get install -y \
