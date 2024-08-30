@@ -1,4 +1,6 @@
 // Import the DLCMessage struct from the DLCMessage module
+extern crate dlc_messages;
+
 use dlc_messages::{Channel, OracleMessages, SegmentReader};
 // Define DLC Builder
 #[warn(dead_code)]
