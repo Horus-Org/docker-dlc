@@ -49,8 +49,6 @@ RUN git clone https://github.com/bitcoin/bitcoin.git /bitcoin-source
 USER bitcoin
 WORKDIR /home/bitcoind
 
-# Prepare the data directory
-RUN mkdir -p "$HOME/.bitcoin/"
 
 # Set the entrypoint to the bitcoind daemon
 ENTRYPOINT ["bitcoind"]
