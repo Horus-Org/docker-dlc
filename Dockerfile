@@ -47,10 +47,7 @@ RUN apt-get update && apt-get install -y \
 RUN git clone https://github.com/bitcoin/bitcoin.git /bitcoin-source
 
 USER bitcoin
-WORKDIR /home/bitcoin
-
-# Copy the built binaries from the builder stage
-COPY --from=builder /bitcoin-dist/usr/local /usr/local
+WORKDIR /home/bitcoind
 
 # Prepare the data directory
 RUN mkdir -p "$HOME/.bitcoin/"
