@@ -55,26 +55,26 @@ fn main() {
 }
 
 fn test_oracle() {
-    let oracle_builder = Oracle::new();
-    let _oracle = oracle_builder.build().unwrap();
+    let oracle_builder: OracleBuilder = Oracle::new();
+    let _oracle: Oracle = oracle_builder.build().unwrap();
     println!("Oracle created successfully");
 }
 fn test_dlc() {
-    let dlc_builder = DLC::new();
+    let dlc_builder: DLCBuilder = DLC::new();
     // Ensure the build method returns a Result type
     let _dlc = dlc_builder.build();
     println!("DLC created successfully");
 }
 
 fn test_dlc_builder() {
-    let dlc_builder = DLC::new();
+    let dlc_builder: DLCBuilder = DLC::new();
     // Ensure the build method returns a Result type
-    let _dlc = dlc_builder.build();
+    let _dlc = dlc_builder.();
     println!("DLC created successfully");
 }
 
 fn test_oracle_builder() {
-    let oracle_builder = Oracle::new();
+    let oracle_builder: OracleBuilder = Oracle::new();
     // Ensure the build method returns a Result type
     let _oracle = oracle_builder.build().expect("Failed to build Oracle");
     println!("Oracle created successfully");
