@@ -48,7 +48,7 @@ RUN apt-get update && apt-get install -y \
   rm -rf /var/lib/apt/lists/*
 
 # Clone the repository at the specified version
-RUN git clone --branch $VERSION $REPO_URL /bitcoin-source
+RUN git clone ARG REPO_URL=https://github.com/bitcoin/bitcoin.git
 WORKDIR /bitcoin-source
 
 # Build the dependencies and configure settings
