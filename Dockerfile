@@ -44,8 +44,7 @@ RUN apt-get update && apt-get install -y \
   rm -rf /var/lib/apt/lists/*
 
 # Clone the repository at the specified version
-RUN git clone ${https://github.com/bitcoin/bitcoin/releases} /bitcoin-source
-WORKDIR /bitcoin-source
+RUN git clone https://github.com/bitcoin/bitcoin/releases /bitcoin-source
 
 # Build the dependencies and configure settings
 RUN ./autogen.sh && \
