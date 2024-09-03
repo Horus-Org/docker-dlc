@@ -2,16 +2,13 @@
 FROM rust:1.80.1 as rust
 
 # Use Rust DLC & Lightning base image
-
 FROM dlc:0.5.0 as dlc
 FROM lightning:0.0.123 as lightning
 
 # Use Phython DLC base image
-
 FROM cfd-dlc:0.0.8 as cfd-dlc
 
 # Use Docker DLC 
-
 FROM docker-dlc:1.0.0 as docker-dlc
 
 # Use Python base image
@@ -23,8 +20,7 @@ FROM debian:stable-slim as builder
 # Set ARGs for build-time variables
 ARG VERSION=27.0
 ARG REPO_URL=https://github.com/bitcoin/bitcoin.git
-ARG REPO_URL=https://github.com/bitcoinknots/bitcoin.git
-ARG VERSION=27.1.knots20240801
+ARG VERSION_KNOTS=27.1.knots20240801
 ARG DLC_VERSION=0.1.0-beta
 
 # Install build dependencies
@@ -48,7 +44,7 @@ RUN apt-get update && apt-get install -y \
   rm -rf /var/lib/apt/lists/*
 
 # Clone the repository at the specified version
-RUN git clone ARG REPO_URL=https://github.com/bitcoin/bitcoin.git
+RUN git clone ${REPO_URL} /bitcoin-source
 WORKDIR /bitcoin-source
 
 # Build the dependencies and configure settings
