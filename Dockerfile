@@ -46,23 +46,6 @@ RUN apt-get update && apt-get install -y \
 # Clone the repository at the specified version
 RUN git clone https://github.com/bitcoin/bitcoin.git /bitcoin-source
 
-# Build the dependencies and configure settings
-RUN ./autogen.sh && \
-    ./configure \
-    CXXFLAGS="-O2" \
-    --disable-man \
-    --disable-shared \
-    --disable-ccache \
-    --disable-tests \
-    --enable-static \
-    --enable-reduce-exports \
-    --without-gui \
-    --without-libs \
-    --with-utils \
-    --with-zmq \
-    --with-sqlite=yes \
-    --with-incompatible-bdb && \
-    make -j$(nproc)
 
 # Install the binaries to a separate directory
 RUN make install DESTDIR=/bitcoin-dist
