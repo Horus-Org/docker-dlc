@@ -46,26 +46,6 @@ RUN apt-get update && apt-get install -y \
 # Clone the repository at the specified version
 RUN git clone https://github.com/bitcoin/bitcoin.git /bitcoin-source
 
-
-# Install the binaries to a separate directory
-RUN make install DESTDIR=/bitcoin-dist
-
-# Start the final stage for a smaller, cleaner image
-FROM debian:stable-slim
-
-# Install runtime dependencies
-RUN apt-get update && apt-get install -y \
-  libboost-system-dev \
-  libboost-filesystem-dev \
-  libboost-thread-dev \
-  libevent-dev \
-  libzmq3-dev \
-  libsqlite3-dev \
-  libdb-dev \
-  libdb++-dev && \
-  rm -rf /var/lib/apt/lists/* \
-  && useradd -ms /bin/bash bitcoin
-
 USER bitcoin
 WORKDIR /home/bitcoin
 
