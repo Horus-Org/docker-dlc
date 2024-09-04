@@ -2,6 +2,8 @@
 
 Docker source for DLCs
 
+[![Create and publish a Docker image](https://github.com/Horus-Org/docker-dlc/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/Horus-Org/docker-dlc/actions/workflows/docker-publish.yml)
+
  ⚠️**Don't use for mainnet**
  
  ⚠️**Beta and WIP**
