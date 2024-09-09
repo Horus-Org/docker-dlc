@@ -41,6 +41,8 @@ impl DLCBuilder {
     pub fn new() -> Self {
         DLCBuilder {
             // Initialize fields if any
+            DLCBuilder<self::DLCBuilderError> {
+            }
         }
     }
 
