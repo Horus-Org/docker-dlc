@@ -1,5 +1,10 @@
 ## Docker DLC development
 
+## 0.1.1-beta
+
+- Fixed bugs
+- Soon Docker Image package
+
 ## 0.1.0-beta
 
 - Initial release

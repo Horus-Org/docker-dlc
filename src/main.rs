@@ -41,8 +41,18 @@ impl DLCBuilder {
     pub fn new() -> Self {
         DLCBuilder {
             // Initialize fields if any
-            DLCBuilder<self::DLCBuilderError> {
-            }
+        }
+    }
+    }
+
+    // Define the build method (stub)
+    pub fn build(self) -> Result<DLC, DLCBuilderError> {
+        Ok(DLC)
+    }
+impl DLCBuilder {
+    pub fn new() -> Self {
+        DLCBuilder {
+            // Initialize fields if any
         }
     }
 
@@ -51,7 +61,6 @@ impl DLCBuilder {
         Ok(DLC)
     }
 }
-
 impl DLCBuilderError {
     pub fn new() -> Self {
         DLCBuilderError
