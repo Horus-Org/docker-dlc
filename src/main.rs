@@ -38,7 +38,7 @@ impl DLC {
 }
 
 impl DLCBuilder {
-    pub fn new() -> Self {
+    pub fn create() -> Self {
         DLCBuilder {
             // Initialize fields if any
         }
@@ -46,37 +46,25 @@ impl DLCBuilder {
     }
 
     // Define the build method (stub)
-    pub fn build(self) -> Result<DLC, DLCBuilderError> {
-        Ok(DLC)
-    }
-impl DLCBuilder {
-    pub fn new() -> Self {
-        DLCBuilder {
-            // Initialize fields if any
+    impl DLCBuilder {
+        pub fn new() -> Self {
+            DLCBuilder {
+                // Initialize fields if any
+            }
+        }
+
+        // Define the build method (stub)
+        pub fn build(self) -> Result<DLC, DLCBuilderError> {
+            Ok(DLC)
         }
     }
 
-    // Define the build method (stub)
-    pub fn build(self) -> Result<DLC, DLCBuilderError> {
-        Ok(DLC)
+    fn main() {
+        // Main function implementation
     }
-}
-impl DLCBuilderError {
-    pub fn new() -> Self {
-        DLCBuilderError
+
+    impl DLCBuilderError {
+        pub fn new() -> Self {
+            DLCBuilderError
+        }
     }
-}
-
-// Example usage
-fn main() {
-    println!("Hello, world!");
-
-    // Example tests
-    test_oracle();
-}
-
-fn test_oracle() {
-    let oracle_builder: OracleBuilder = Oracle::new();
-    let _oracle: Oracle = oracle_builder.build().unwrap();
-    println!("Oracle created successfully");
-}
