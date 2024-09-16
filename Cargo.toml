@@ -5,6 +5,6 @@ version = "1.0.1-beta"
 
 [dependencies]
 
-dlc =  "0.5.0"
-dlc-manager = "0.5.0"
-dlc-messages = "0.5.0"
+dlc = "=0.5.0"
+dlc-manager = "=0.5.0"
+dlc-messages = "=0.5.0"
