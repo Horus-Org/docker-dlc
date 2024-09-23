@@ -4,6 +4,8 @@ extern crate dlc_messages;
 #[warn(dead_code)]
 pub struct DLCBuilder {
     // Define fields for the DLCBuilder here
+    dlc_messages: Vec<dlc_messages::Message>,
+    
 }
 
 // Define Oracle struct and OracleBuilder struct
