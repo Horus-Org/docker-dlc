@@ -31,5 +31,5 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 
 - [x] Release in Beta 2024
 - [ ] Rebuild DLC messages in Rust
-- [ ] RBF
-- [ ] DLC Dev Kit
+- [ ] RBF 
+- [x] DLC Dev Kit
