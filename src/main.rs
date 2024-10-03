@@ -51,6 +51,7 @@ impl DLCBuilder {
     impl DLCBuilder {
         pub fn new() -> Self {
             DLCBuilder {
+                dlc_messages: todo!(),
                 // Initialize fields if any
             }
         }
