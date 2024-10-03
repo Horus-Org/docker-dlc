@@ -30,6 +30,7 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 ## Roadmap
 
 - [x] Release in Beta 2024
+- [x] Breez SDK compatible
 - [ ] Rebuild DLC messages in Rust
 - [ ] RBF 
 - [x] DLC Dev Kit
