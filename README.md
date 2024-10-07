@@ -4,7 +4,6 @@ Docker source for DLCs
 
 [![Bitcoin-only](https://img.shields.io/badge/bitcoin-only-FF9900?logo=bitcoin)](https://twentyone.world)
 [![LN](https://img.shields.io/badge/lightning-792EE5?logo=lightning)](https://mempool.space/lightning)
-[![Create and publish a Docker image](https://github.com/Horus-Org/docker-dlc/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/Horus-Org/docker-dlc/actions/workflows/docker-publish.yml)
 
  ⚠️**Don't use for mainnet**
  
@@ -34,3 +33,5 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [ ] Rebuild DLC messages in Rust
 - [ ] RBF 
 - [x] DLC Dev Kit
+- [ ] CLI
+- [ ] Fix bugs and issues
