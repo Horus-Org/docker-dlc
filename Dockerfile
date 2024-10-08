@@ -12,7 +12,7 @@ FROM cfd-dlc:0.0.8 as cfd-dlc
 FROM docker-dlc:1.0.2 as docker-dlc
 
 # Use Python base image
-FROM python:3.12-slim
+FROM python:3.13-slim
 
 # Define the base image for the build stage
 FROM debian:stable-slim as builder
