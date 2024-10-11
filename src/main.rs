@@ -1,5 +1,5 @@
 // Import the dlc_messages crate
-use std::alloc::Ipv6MulticastScope::Global;
+use std::net::Ipv6MulticastScope::Global;
 extern crate dlc_messages;
 use dlc_messages::Message;
 
