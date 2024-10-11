@@ -1,11 +1,13 @@
+// Import the dlc_messages crate
+use std::alloc::Ipv6MulticastScope::Global;
 extern crate dlc_messages;
+use dlc_messages::Message;
 
-// Define DLC Builder
+// Define DLCBuilder struct
 #[warn(dead_code)]
 pub struct DLCBuilder {
-    // Define fields for the DLCBuilder here
-    dlc_messages: Vec<dlc_messages::Message>,
-    
+    // Define fields for DLC messages
+    dlc_messages: Vec<(Message, Global)>, // Assuming dlc_messages::Message exists
 }
 
 // Define Oracle struct and OracleBuilder struct
@@ -23,7 +25,7 @@ impl OracleBuilder {
         OracleBuilder
     }
 
-    // Define the build method (stub)
+    // Stub for the build method
     pub fn build(self) -> Result<Oracle, String> {
         Ok(Oracle)
     }
@@ -42,33 +44,46 @@ impl DLC {
 impl DLCBuilder {
     pub fn create() -> Self {
         DLCBuilder {
-            dlc_messages: todo!(),
-            // Initialize fields if any
-        }
-    }
-    }
-
-    // Define the build method (stub)
-    impl DLCBuilder {
-        pub fn new() -> Self {
-            DLCBuilder {
-                dlc_messages: todo!(),
-                // Initialize fields if any
-            }
-        }
-
-        // Define the build method (stub)
-        pub fn build(self) -> Result<DLC, DLCBuilderError> {
-            Ok(DLC)
+            dlc_messages: Vec::new(), // Initialize with an empty vector
         }
     }
 
-    fn main() {
-        // Main function implementation
-    }
-
-    impl DLCBuilderError {
-        pub fn new() -> Self {
-            DLCBuilderError
+    // Constructor for DLCBuilder
+    pub fn new() -> Self {
+        DLCBuilder {
+            dlc_messages: Vec::new(), // Initialize with an empty vector
         }
     }
+
+    // Stub for the build method
+    pub fn build(self) -> Result<DLC, DLCBuilderError> {
+        Ok(DLC)
+    }
+}
+
+impl DLCBuilderError {
+    pub fn new() -> Self {
+        DLCBuilderError
+    }
+}
+
+// Main function
+fn main() {
+    let dlc_builder = DLC::new();
+    let oracle_builder = Oracle::new();
+
+    // You can now use the builders, for example:
+    let dlc = dlc_builder.build();
+    let oracle = oracle_builder.build();
+
+    // Handle the result
+    match dlc {
+        Ok(_) => println!("DLC successfully built."),
+        Err(_) => println!("Error building DLC."),
+    }
+
+    match oracle {
+        Ok(_) => println!("Oracle successfully built."),
+        Err(_) => println!("Error building Oracle."),
+    }
+}
