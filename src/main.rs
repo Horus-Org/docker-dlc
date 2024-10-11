@@ -1,13 +1,13 @@
 // Import the dlc_messages crate
-use std::net::Ipv6MulticastScope::Global;
-extern crate dlc_messages;
 use dlc_messages::Message;
+use ddk_messages::Message;
 
 // Define DLCBuilder struct
 #[warn(dead_code)]
 pub struct DLCBuilder {
     // Define fields for DLC messages
-    dlc_messages: Vec<(Message, Global)>, // Assuming dlc_messages::Message exists
+    ddk_messages: Vec<Message>, // Initialize with an empty vector
+
 }
 
 // Define Oracle struct and OracleBuilder struct
@@ -44,14 +44,14 @@ impl DLC {
 impl DLCBuilder {
     pub fn create() -> Self {
         DLCBuilder {
-            dlc_messages: Vec::new(), // Initialize with an empty vector
+            ddk_messages: Vec::new(), // Initialize with an empty vector
         }
     }
 
     // Constructor for DLCBuilder
     pub fn new() -> Self {
         DLCBuilder {
-            dlc_messages: Vec::new(), // Initialize with an empty vector
+            ddk_messages: Vec::new(), // Initialize with an empty vector
         }
     }
 
