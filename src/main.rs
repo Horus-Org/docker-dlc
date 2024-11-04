@@ -4,8 +4,8 @@ use dlc_messages::Message;
 #[warn(dead_code)]
 pub struct DLCBuilder {
     // Define fields for DLC messages
+    #[allow(dead_code)]
     ddk_messages: Vec<Message>, // Initialize with an empty vector
-
 }
 
 // Define Oracle struct and OracleBuilder struct
