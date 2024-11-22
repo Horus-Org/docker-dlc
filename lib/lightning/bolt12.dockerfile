@@ -5,4 +5,9 @@ RUN lightningcli signmessage
 
 FROM lightningcli:latest
 FROM baseImage 
-FROM baseImage
+
+RUN lightningcli decode
+RUN lightningcli encode
+RUN lightningcli signmessage
+RUN lightningcli offer
+RUN lightningcli offer_channel
