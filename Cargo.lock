@@ -733,9 +733,9 @@ dependencies = [
 
 [[package]]
 name = "dlc-manager"
-version = "0.7.0"
+version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "26699fbb0febd0be1291a522b1195412e03972ac01df7a12fab4e898b151e43f"
+checksum = "77e08192b67d858d5c7179afec81e34fcfcb4e7339c018beadbd0eeccb0f80da"
 dependencies = [
  "async-trait",
  "bitcoin",
@@ -750,9 +750,9 @@ dependencies = [
 
 [[package]]
 name = "dlc-messages"
-version = "0.7.0"
+version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1c08c03b1f6344424565a3191d66990bd93a94c71fb9f30dbf2dfeb80ff1d6a9"
+checksum = "a2720ffe49ba9d5427653d9694ef9b4af23b05d827f6433a588c85adf56335a3"
 dependencies = [
  "bitcoin",
  "dlc",
@@ -762,9 +762,9 @@ dependencies = [
 
 [[package]]
 name = "dlc-trie"
-version = "0.7.0"
+version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "afa7f8540b06a5542afa71134efa029a6c9f5f6033def5ded711dd44f834d476"
+checksum = "47aa81134f4420eec871d0df562dee2fdcd63992bd935b9ab572e8ab50e90eb7"
 dependencies = [
  "bitcoin",
  "dlc",
