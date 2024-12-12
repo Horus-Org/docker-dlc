@@ -750,9 +750,9 @@ dependencies = [
 
 [[package]]
 name = "dlc-messages"
-version = "0.7.0"
+version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1c08c03b1f6344424565a3191d66990bd93a94c71fb9f30dbf2dfeb80ff1d6a9"
+checksum = "a2720ffe49ba9d5427653d9694ef9b4af23b05d827f6433a588c85adf56335a3"
 dependencies = [
  "bitcoin",
  "dlc",
