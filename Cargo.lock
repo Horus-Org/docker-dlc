@@ -624,9 +624,9 @@ checksum = "22ec99545bb0ed0ea7bb9b8e1e9122ea386ff8a48c0922e43f36d45ab09e0e80"
 
 [[package]]
 name = "ddk"
-version = "0.0.12"
+version = "0.0.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "773ca6d8ddddd44f3c564d6d198de662431b6c6022c75feee7e6333e4555cf1f"
+checksum = "85956c40b80ba493884803b6f54d1db61ac8e70e41010ad53bdd94e0def61e49"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -636,10 +636,10 @@ dependencies = [
  "bitcoin",
  "chrono",
  "crossbeam",
- "ddk-dlc",
  "ddk-manager",
- "ddk-messages",
- "ddk-trie",
+ "dlc",
+ "dlc-messages",
+ "dlc-trie",
  "hex",
  "kormir",
  "lightning",
@@ -729,6 +729,7 @@ dependencies = [
  "miniscript",
  "secp256k1-sys",
  "secp256k1-zkp",
+ "serde",
 ]
 
 [[package]]
@@ -758,6 +759,7 @@ dependencies = [
  "dlc",
  "lightning",
  "secp256k1-zkp",
+ "serde",
 ]
 
 [[package]]
@@ -769,6 +771,7 @@ dependencies = [
  "bitcoin",
  "dlc",
  "secp256k1-zkp",
+ "serde",
 ]
 
 [[package]]
@@ -1406,13 +1409,13 @@ dependencies = [
 
 [[package]]
 name = "kormir"
-version = "0.3.2"
+version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8d55dddf4f5a3346cc2af25d3cc3c72be835baeb605e09325358f7f90e524901"
+checksum = "ef15a66fa507767ca1d4dbe0705009e2c4c59d0f3cf6017a72fadf50c4a650f5"
 dependencies = [
  "bitcoin",
- "ddk-dlc",
- "ddk-messages",
+ "dlc",
+ "dlc-messages",
  "hex",
  "lightning",
  "log",
