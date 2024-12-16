@@ -29,6 +29,8 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 ## Roadmap
 
 
-- [x] Rebuild DLC messages in Rust (WIP)
+- [x] Rebuild DLC messages in Rust
 - [ ] RBF 
 - [ ] CLI
+- [ ] Docker DLC image
+- [ ] Docker DLC Crates
