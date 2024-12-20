@@ -2,14 +2,14 @@
 FROM rust:1.83.0 as rust
 
 # Use Rust DLC & Lightning base image
-FROM dlc:0.5.0 as dlc
-FROM lightning:0.0.123 as lightning
+FROM dlc:0.7.1 as dlc
+FROM lightning:24.11.1 as lightning
 
 # Use Phython DLC base image
 FROM cfd-dlc:0.0.8 as cfd-dlc
 
 # Use Docker DLC 
-FROM docker-dlc:1.0.4 as docker-dlcc
+FROM docker-dlc:1.0.5 as docker-dlcc
 
 # Use Python base image
 FROM python:3.13-slim
