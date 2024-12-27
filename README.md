@@ -30,7 +30,7 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 
 
 - [x] Rebuild DLC messages in Rust
-- [ ] RBF 
-- [ ] CLI
+- [x] RBF (WIP)
+- [x] CLI (WIP)
 - [ ] Docker DLC image
 - [ ] Docker DLC Crates
