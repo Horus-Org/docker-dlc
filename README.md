@@ -34,3 +34,4 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [x] CLI (WIP)
 - [ ] Docker DLC image
 - [ ] Docker DLC Crates
+- [ ] Out of beta
