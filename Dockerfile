@@ -9,7 +9,7 @@ FROM lightning:24.11.1 as lightning
 FROM cfd-dlc:0.0.8 as cfd-dlc
 
 # Use Docker DLC 
-FROM docker-dlc:1.0.5 as docker-dlcc
+FROM docker-dlc:1.0.6 as docker-dlcc
 
 # Use Python base image
 FROM python:3.13-slim
