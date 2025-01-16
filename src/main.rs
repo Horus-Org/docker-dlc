@@ -1,15 +1,14 @@
 // Import necessary crates
-use dlc_messages::{Message, OfferDlc as DlcOfferDlc};
-use ddk_messages::{OfferDlc as DdkOfferDlc};
+use dlc_messages::{Message as DlcMessage, OfferDlc as DlcOfferDlc};
+use ddk_messages::{Message as DdkMessage, OfferDlc as DdkOfferDlc};
 
 // Conversion between OfferDlc types
 impl From<DdkOfferDlc> for DlcOfferDlc {
     fn from(ddk_offer: DdkOfferDlc) -> Self {
         DlcOfferDlc {
-            // Map fields here (example assumes similar field names)
+            // Assume field mapping is straightforward
             field1: ddk_offer.field1,
             field2: ddk_offer.field2,
-            // Add fields as needed...
         }
     }
 }
@@ -17,104 +16,75 @@ impl From<DdkOfferDlc> for DlcOfferDlc {
 impl From<DlcOfferDlc> for DdkOfferDlc {
     fn from(dlc_offer: DlcOfferDlc) -> Self {
         DdkOfferDlc {
-            // Map fields here
             field1: dlc_offer.field1,
             field2: dlc_offer.field2,
         }
     }
 }
 
-// Define structs
-pub struct DLCBuilder {
-    ddk_messages: Vec<Message>,
-}
-
-pub struct DLC;
-pub struct Oracle;
-pub struct OracleBuilder;
-
-// Implement Oracle and OracleBuilder
-impl Oracle {
-    pub fn new() -> OracleBuilder {
-        OracleBuilder::new()
-    }
-}
-
-impl OracleBuilder {
-    pub fn new() -> Self {
-        OracleBuilder
-    }
-
-    pub fn build(self) -> Result<Oracle, String> {
-        Ok(Oracle)
-    }
-}
-
-// Implement DLC and DLCBuilder
-impl DLC {
-    pub fn new() -> DLCBuilder {
-        DLCBuilder::new()
-    }
-}
-
-impl DLCBuilder {
-    pub fn create() -> Self {
-        DLCBuilder {
-            ddk_messages: Vec::new(),
+// Conversion for Messages
+impl From<DdkMessage> for DlcMessage {
+    fn from(ddk_msg: DdkMessage) -> Self {
+        match ddk_msg {
+            DdkMessage::OfferDlc(offer) => DlcMessage::OfferDlc(offer.into()),
+            // Map other variants here
+            _ => unimplemented!(), // Placeholder
         }
     }
+}
 
-    pub fn new() -> Self {
-        DLCBuilder {
-            ddk_messages: Vec::new(),
+impl From<DlcMessage> for DdkMessage {
+    fn from(dlc_msg: DlcMessage) -> Self {
+        match dlc_msg {
+            DlcMessage::OfferDlc(offer) => DdkMessage::OfferDlc(offer.into()),
+            // Map other variants here
+            _ => unimplemented!(), // Placeholder
         }
-    }
-
-    pub fn build(self) -> Result<DLC, String> {
-        Ok(DLC)
     }
 }
 
-// Example OracleAnnouncement conversion
-use async_trait::async_trait;
-use std::future::Future;
-use std::pin::Pin;
-
-#[async_trait]
+// Async Oracle Example
+#[async_trait::async_trait]
 pub trait OracleTrait {
-    async fn get_announcement(&self) -> Result<dlc_messages::oracle_msgs::OracleAnnouncement, String>;
+    async fn get_announcement(&self) -> Result<ddk_messages::oracle_msgs::OracleAnnouncement, String>;
+    async fn get_attestation(&self) -> Result<ddk_messages::oracle_msgs::OracleAttestation, String>;
 }
 
 pub struct MemoryOracle;
 
-#[async_trait]
+#[async_trait::async_trait]
 impl OracleTrait for MemoryOracle {
-    async fn get_announcement(&self) -> Result<dlc_messages::oracle_msgs::OracleAnnouncement, String> {
-        let ddk_announcement = ddk_messages::oracle_msgs::OracleAnnouncement {
-            // Create or fetch your data
+    async fn get_announcement(&self) -> Result<ddk_messages::oracle_msgs::OracleAnnouncement, String> {
+        let dlc_announcement = dlc_messages::oracle_msgs::OracleAnnouncement {
+            // Example field
             field: String::from("example"),
         };
 
-        let dlc_announcement: dlc_messages::oracle_msgs::OracleAnnouncement = ddk_announcement.into();
-        Ok(dlc_announcement)
+        Ok(dlc_announcement.into()) // Convert to `ddk_messages::OracleAnnouncement`
+    }
+
+    async fn get_attestation(&self) -> Result<ddk_messages::oracle_msgs::OracleAttestation, String> {
+        let dlc_attestation = dlc_messages::oracle_msgs::OracleAttestation {
+            field: vec![1, 2, 3],
+        };
+
+        Ok(dlc_attestation.into()) // Convert to `ddk_messages::OracleAttestation`
     }
 }
 
-// Main function
-fn main() {
-    let dlc_builder = DLC::new();
-    let oracle_builder = Oracle::new();
+// Transport Example
+pub struct Transport;
 
-    let dlc = dlc_builder.build();
-    let oracle = oracle_builder.build();
-
-    match dlc {
-        Ok(_) => println!("DLC successfully built."),
-        Err(_) => println!("Error building DLC."),
+impl Transport {
+    pub async fn on_dlc_message(&self, msg: dlc_messages::Message) -> Result<(), String> {
+        let ddk_message: ddk_messages::Message = msg.into();
+        self.handle_message(ddk_message).await
     }
 
-    match oracle {
-        Ok(_) => println!("Oracle successfully built."),
-        Err(_) => println!("Error building Oracle."),
+    async fn handle_message(&self, message: ddk_messages::Message) -> Result<(), String> {
+        // Handle converted message
+        println!("Message handled: {:?}", message);
+        Ok(())
     }
 }
+
