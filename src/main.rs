@@ -1,15 +1,39 @@
-use dlc_messages::Message;
+// Import necessary crates
+use dlc_messages::{Message, OfferDlc as DlcOfferDlc};
+use ddk_messages::{OfferDlc as DdkOfferDlc};
 
-// Define DLCBuilder struct
+// Conversion between OfferDlc types
+impl From<DdkOfferDlc> for DlcOfferDlc {
+    fn from(ddk_offer: DdkOfferDlc) -> Self {
+        DlcOfferDlc {
+            // Map fields here (example assumes similar field names)
+            field1: ddk_offer.field1,
+            field2: ddk_offer.field2,
+            // Add fields as needed...
+        }
+    }
+}
+
+impl From<DlcOfferDlc> for DdkOfferDlc {
+    fn from(dlc_offer: DlcOfferDlc) -> Self {
+        DdkOfferDlc {
+            // Map fields here
+            field1: dlc_offer.field1,
+            field2: dlc_offer.field2,
+        }
+    }
+}
+
+// Define structs
 pub struct DLCBuilder {
-    // DLC messages (field in use)
     ddk_messages: Vec<Message>,
 }
 
-// Define Oracle struct and OracleBuilder struct
+pub struct DLC;
 pub struct Oracle;
 pub struct OracleBuilder;
 
+// Implement Oracle and OracleBuilder
 impl Oracle {
     pub fn new() -> OracleBuilder {
         OracleBuilder::new()
@@ -26,12 +50,7 @@ impl OracleBuilder {
     }
 }
 
-// Define DLC struct and DLCBuilderError struct
-pub struct DLC;
-pub enum DLCBuilderError {
-    EmptyMessages,
-}
-
+// Implement DLC and DLCBuilder
 impl DLC {
     pub fn new() -> DLCBuilder {
         DLCBuilder::new()
@@ -39,31 +58,45 @@ impl DLC {
 }
 
 impl DLCBuilder {
+    pub fn create() -> Self {
+        DLCBuilder {
+            ddk_messages: Vec::new(),
+        }
+    }
+
     pub fn new() -> Self {
         DLCBuilder {
-            ddk_messages: Vec::new(), // Initialized to an empty vector
+            ddk_messages: Vec::new(),
         }
     }
 
-    pub fn add_message(mut self, message: Message) -> Self {
-        self.ddk_messages.push(message);
-        self
-    }
-
-    pub fn build(self) -> Result<DLC, DLCBuilderError> {
-        if self.ddk_messages.is_empty() {
-            Err(DLCBuilderError::EmptyMessages)
-        } else {
-            Ok(DLC)
-        }
+    pub fn build(self) -> Result<DLC, String> {
+        Ok(DLC)
     }
 }
 
-impl DLCBuilderError {
-    pub fn to_string(&self) -> &'static str {
-        match self {
-            DLCBuilderError::EmptyMessages => "No messages provided to DLCBuilder.",
-        }
+// Example OracleAnnouncement conversion
+use async_trait::async_trait;
+use std::future::Future;
+use std::pin::Pin;
+
+#[async_trait]
+pub trait OracleTrait {
+    async fn get_announcement(&self) -> Result<dlc_messages::oracle_msgs::OracleAnnouncement, String>;
+}
+
+pub struct MemoryOracle;
+
+#[async_trait]
+impl OracleTrait for MemoryOracle {
+    async fn get_announcement(&self) -> Result<dlc_messages::oracle_msgs::OracleAnnouncement, String> {
+        let ddk_announcement = ddk_messages::oracle_msgs::OracleAnnouncement {
+            // Create or fetch your data
+            field: String::from("example"),
+        };
+
+        let dlc_announcement: dlc_messages::oracle_msgs::OracleAnnouncement = ddk_announcement.into();
+        Ok(dlc_announcement)
     }
 }
 
@@ -72,20 +105,16 @@ fn main() {
     let dlc_builder = DLC::new();
     let oracle_builder = Oracle::new();
 
-    // Add messages to DLCBuilder
-    let dlc_result = dlc_builder
-        .add_message(Message::default()) // Assuming Message has a `default` constructor
-        .build();
+    let dlc = dlc_builder.build();
+    let oracle = oracle_builder.build();
 
-    // Handle the result
-    match dlc_result {
+    match dlc {
         Ok(_) => println!("DLC successfully built."),
-        Err(err) => println!("Error building DLC: {}", err.to_string()),
+        Err(_) => println!("Error building DLC."),
     }
 
-    let oracle_result = oracle_builder.build();
-    match oracle_result {
+    match oracle {
         Ok(_) => println!("Oracle successfully built."),
-        Err(err) => println!("Error building Oracle: {}", err),
+        Err(_) => println!("Error building Oracle."),
     }
 }
