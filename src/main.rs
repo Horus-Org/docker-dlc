@@ -1,11 +1,9 @@
-// Import the dlc_messages crate
 use dlc_messages::Message;
+
 // Define DLCBuilder struct
-#[warn(dead_code)]
 pub struct DLCBuilder {
-    // Define fields for DLC messages
-    #[allow(dead_code)]
-    ddk_messages: Vec<Message>, // Initialize with an empty vector
+    // DLC messages (field in use)
+    ddk_messages: Vec<Message>,
 }
 
 // Define Oracle struct and OracleBuilder struct
@@ -23,7 +21,6 @@ impl OracleBuilder {
         OracleBuilder
     }
 
-    // Stub for the build method
     pub fn build(self) -> Result<Oracle, String> {
         Ok(Oracle)
     }
@@ -31,7 +28,9 @@ impl OracleBuilder {
 
 // Define DLC struct and DLCBuilderError struct
 pub struct DLC;
-pub struct DLCBuilderError;
+pub enum DLCBuilderError {
+    EmptyMessages,
+}
 
 impl DLC {
     pub fn new() -> DLCBuilder {
@@ -40,28 +39,31 @@ impl DLC {
 }
 
 impl DLCBuilder {
-    pub fn create() -> Self {
-        DLCBuilder {
-            ddk_messages: Vec::new(), // Initialize with an empty vector
-        }
-    }
-
-    // Constructor for DLCBuilder
     pub fn new() -> Self {
         DLCBuilder {
-            ddk_messages: Vec::new(), // Initialize with an empty vector
+            ddk_messages: Vec::new(), // Initialized to an empty vector
         }
     }
 
-    // Stub for the build method
+    pub fn add_message(mut self, message: Message) -> Self {
+        self.ddk_messages.push(message);
+        self
+    }
+
     pub fn build(self) -> Result<DLC, DLCBuilderError> {
-        Ok(DLC)
+        if self.ddk_messages.is_empty() {
+            Err(DLCBuilderError::EmptyMessages)
+        } else {
+            Ok(DLC)
+        }
     }
 }
 
 impl DLCBuilderError {
-    pub fn new() -> Self {
-        DLCBuilderError
+    pub fn to_string(&self) -> &'static str {
+        match self {
+            DLCBuilderError::EmptyMessages => "No messages provided to DLCBuilder.",
+        }
     }
 }
 
@@ -70,18 +72,20 @@ fn main() {
     let dlc_builder = DLC::new();
     let oracle_builder = Oracle::new();
 
-    // You can now use the builders, for example:
-    let dlc = dlc_builder.build();
-    let oracle = oracle_builder.build();
+    // Add messages to DLCBuilder
+    let dlc_result = dlc_builder
+        .add_message(Message::default()) // Assuming Message has a `default` constructor
+        .build();
 
     // Handle the result
-    match dlc {
+    match dlc_result {
         Ok(_) => println!("DLC successfully built."),
-        Err(_) => println!("Error building DLC."),
+        Err(err) => println!("Error building DLC: {}", err.to_string()),
     }
 
-    match oracle {
+    let oracle_result = oracle_builder.build();
+    match oracle_result {
         Ok(_) => println!("Oracle successfully built."),
-        Err(_) => println!("Error building Oracle."),
+        Err(err) => println!("Error building Oracle: {}", err),
     }
 }
