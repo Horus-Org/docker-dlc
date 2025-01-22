@@ -13,3 +13,7 @@ $ dlc utxo
 $ dlc script
 $ dlc utxo
 $ lightning invoice
+$ lightning pay
+
+# bitcoin
+$ bitcoin
