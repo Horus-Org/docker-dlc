@@ -21,7 +21,6 @@ Docker source for DLCs
 - DLCs
 - Payments support
 
-
 ### Complement repository
 
 You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/awning)
@@ -34,4 +33,4 @@ You can use this Docker DLC with [Docker + LND](https://github.com/giovantenne/a
 - [x] CLI (WIP)
 - [ ] Docker DLC image
 - [ ] Docker DLC Crates
-- [ ] Out of beta
+- [ ] Out of beta in 2025/26
