@@ -11,3 +11,5 @@ RUN lightningcli encode
 RUN lightningcli signmessage
 RUN lightningcli offer
 RUN lightningcli offer_channel
+
+RUN lightningcli offer_channel --help
