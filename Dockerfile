@@ -4,6 +4,8 @@ FROM rust:1.84.1 as rust
 # Use Rust DLC & Lightning base image
 FROM dlc:0.7.1 as dlc
 FROM lightning:24.11.1 as lightning
+FROM eclair:0.11.0 as eclair
+FROM lnd:0.18.5 as lnd
 
 # Use Phython DLC base image
 FROM cfd-dlc:0.0.8 as cfd-dlc
