@@ -12,6 +12,7 @@ dependencies = [
  "dlc-messages",
  "idna 1.0.3",
  "openssl",
+ "ring",
  "rustls 0.23.23",
 ]
 
