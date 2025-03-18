@@ -4,7 +4,7 @@ FROM rust:1.85.0 as rust
 # Use Rust DLC & Lightning base image
 FROM dlc:0.7.1 as dlc
 FROM lightning:24.11.1 as lightning
-FROM eclair:0.11.0 as eclair
+FROM eclair:0.12.0 as eclair
 FROM lnd:0.18.5 as lnd
 
 # Use Phython DLC base image
