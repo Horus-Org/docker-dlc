@@ -497,9 +497,9 @@ dependencies = [
 
 [[package]]
 name = "ddk"
-version = "0.0.14"
+version = "0.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "188b5b589445f4909fc097bffa3f0ec02d3e9766a018ace04f5b3a43b08aa94a"
+checksum = "c699f3ffa2ddc0242f9d74012cd51802c7e8554f6af2634eede9211c34ff77be"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -528,9 +528,9 @@ dependencies = [
 
 [[package]]
 name = "ddk-manager"
-version = "0.7.3"
+version = "0.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c9bbc2d0575528001e78364dedea796aa03b00a02ffef0f972ce006eb95c8a95"
+checksum = "1d5ce1b409df962b3451eea070bd5c10061c23786876ea2b97f971854e38b61e"
 dependencies = [
  "async-trait",
  "bitcoin",
@@ -542,6 +542,7 @@ dependencies = [
  "lightning",
  "secp256k1-zkp",
  "serde",
+ "tokio",
  "tracing",
 ]
 
@@ -1212,9 +1213,9 @@ dependencies = [
 
 [[package]]
 name = "kormir"
-version = "0.4.1"
+version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef15a66fa507767ca1d4dbe0705009e2c4c59d0f3cf6017a72fadf50c4a650f5"
+checksum = "b49390cd20115267c6b9d60dffb2f68a9d0e83f6aca9ae336e3892f11a7b8ff6"
 dependencies = [
  "bitcoin",
  "dlc",
@@ -1240,9 +1241,9 @@ checksum = "830d08ce1d1d941e6b30645f1a0eb5643013d835ce3779a5fc208261dbe10f55"
 
 [[package]]
 name = "libc"
-version = "0.2.155"
+version = "0.2.171"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "97b3888a4aecf77e811145cadf6eef5901f4782c53886191b2f693f24761847c"
+checksum = "c19937216e9d3aa9956d9bb8dfc0b0c8beb6058fc4f7a4dc4d850edf86a237d6"
 
 [[package]]
 name = "libloading"
@@ -2094,9 +2095,9 @@ checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
 
 [[package]]
 name = "tokio"
-version = "1.40.0"
+version = "1.44.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2b070231665d27ad9ec9b8df639893f46727666c6767db40317fbe920a5d998"
+checksum = "f382da615b842244d4b8738c82ed1275e6c5dd90c459a30941cd07080b06c91a"
 dependencies = [
  "backtrace",
  "bytes",
@@ -2112,9 +2113,9 @@ dependencies = [
 
 [[package]]
 name = "tokio-macros"
-version = "2.4.0"
+version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "693d596312e88961bc67d7f1f97af8a70227d9f90c31bba5806eec004978d752"
+checksum = "6e06d43f1345a3bcd39f6a56dbb7dcab2ba47e68e8ac134855e7e2bdbaf8cab8"
 dependencies = [
  "proc-macro2",
  "quote",
