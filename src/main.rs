@@ -24,12 +24,9 @@ pub struct MemoryOracle;
 #[async_trait]
 impl OracleTrait for MemoryOracle {
     async fn get_announcement(&self) -> Result<OracleAnnouncement, ConversionError> {
-        Ok(OracleAnnouncement {
-            event_id: String::from("example"),
-            oracle_public_key: String::from("example"),
-            outcomes: vec![1, 2, 3],
-        })
+        Ok(OracleAnnouncement {event_id:String::from("example"),oracle_public_key:String::from("example"),outcomes:vec![1,2,3], announcement_signature: todo!(), oracle_event: todo!()) }
     }
+        }
 
     async fn get_attestation(&self) -> Result<OracleAttestation, ConversionError> {        Ok(OracleAttestation {
             event_id: String::from("example"),         // Example event ID
@@ -38,7 +35,6 @@ impl OracleTrait for MemoryOracle {
             outcomes: vec![1, 2, 3],                   // Consistent with announcement
         })
     }
-}
 /// Message transport layer
 #[derive(Debug, Default)]
 pub struct Transport;
