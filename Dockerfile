@@ -20,7 +20,7 @@ FROM python:3.13-slim
 FROM debian:stable-slim as builder
 
 # Set ARGs for build-time variables
-ARG VERSION=28.1
+ARG VERSION=29.0
 ARG REPO_URL=https://github.com/bitcoin/bitcoin.git
 ARG REPO_URL=https://github.com/bitcoinknots/bitcoin
 ARG VERSION_KNOTS=28.1.knots20250305
