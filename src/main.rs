@@ -16,25 +16,6 @@ pub trait OracleTrait: Send + Sync {
     /// Fetches an Oracle attestation
     async fn get_attestation(&self) -> Result<OracleAttestation, ConversionError>;
 }
-
-/// In-memory Oracle implementation
-#[derive(Debug, Default)]
-pub struct MemoryOracle;
-
-#[async_trait]
-impl OracleTrait for MemoryOracle {
-    async fn get_announcement(&self) -> Result<OracleAnnouncement, ConversionError> {
-        Ok(OracleAnnouncement {event_id:String::from("example"),oracle_public_key:String::from("example"),outcomes:vec![1,2,3], announcement_signature: todo!(), oracle_event: todo!()) }
-    }
-        }
-
-    async fn get_attestation(&self) -> Result<OracleAttestation, ConversionError> {        Ok(OracleAttestation {
-            event_id: String::from("example"),         // Example event ID
-            oracle_public_key: String, // Consistent with announcement
-            signatures: vec![String::from("example1"), String::from("example2")], // Example signatures
-            outcomes: vec![1, 2, 3],                   // Consistent with announcement
-        })
-    }
 /// Message transport layer
 #[derive(Debug, Default)]
 pub struct Transport;
@@ -50,4 +31,10 @@ impl Transport {
         log::debug!("Handling message: {:?}", message);
         Ok(())
     }
+}
+
+
+fn main() {
+    // Initialize logger
+    env_logger::init();
 }
