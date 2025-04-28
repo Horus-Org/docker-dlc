@@ -9,3 +9,7 @@ pub struct Cli {
     pub
     path: PathBuf,
 }
+
+pub struct command {
+    
+}
