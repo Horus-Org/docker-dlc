@@ -11,7 +11,7 @@ FROM lnd:0.18.5 as lnd
 FROM cfd-dlc:0.0.8 as cfd-dlc
 
 # Use Docker DLC 
-FROM docker-dlc:1.0.7 as docker-dlcc
+FROM docker-dlc:1.0.9 as docker-dlcc
 
 # Use Python base image
 FROM python:3.13-slim
