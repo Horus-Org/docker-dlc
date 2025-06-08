@@ -4,7 +4,7 @@ version = 4
 
 [[package]]
 name = "Docker_DLC"
-version = "1.0.9-beta"
+version = "1.0.10-beta"
 dependencies = [
  "async-trait",
  "crossbeam",

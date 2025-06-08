@@ -34,7 +34,7 @@ impl Transport {
 }
 
 
-fn main() {
+pub fn main() {
     // Initialize logger
     env_logger::init();
 }
