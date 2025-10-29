@@ -1,4 +1,4 @@
-FROM node:22.21-alpine
+FROM node:24.11-alpine
 FROM api-firewall-gateway:latest
 
 COPY --from=builder /usr /usr/
