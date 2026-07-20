@@ -8,9 +8,9 @@ version = "1.0.11-beta"
 dependencies = [
  "async-trait",
  "crossbeam",
- "dlc",
+ "dlc 0.7.1",
  "dlc-manager",
- "dlc-messages",
+ "dlc-messages 0.8.0",
  "env_logger",
  "idna",
  "log",
@@ -362,6 +362,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "dlc"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "329a66c9207135f9f2aaf676adde16d6ab752f3322653b28eedf127cb3d65b61"
+dependencies = [
+ "bitcoin",
+ "miniscript",
+ "secp256k1-sys",
+ "secp256k1-zkp",
+]
+
+[[package]]
 name = "dlc-manager"
 version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -369,8 +381,8 @@ checksum = "77e08192b67d858d5c7179afec81e34fcfcb4e7339c018beadbd0eeccb0f80da"
 dependencies = [
  "async-trait",
  "bitcoin",
- "dlc",
- "dlc-messages",
+ "dlc 0.7.1",
+ "dlc-messages 0.7.1",
  "dlc-trie",
  "hex-conservative 0.1.2",
  "lightning",
@@ -385,7 +397,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2720ffe49ba9d5427653d9694ef9b4af23b05d827f6433a588c85adf56335a3"
 dependencies = [
  "bitcoin",
- "dlc",
+ "dlc 0.7.1",
+ "lightning",
+ "secp256k1-zkp",
+]
+
+[[package]]
+name = "dlc-messages"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4a105adfdef022a985d7c4519b0ba05156e8e833fbd2378169792277029755fe"
+dependencies = [
+ "bitcoin",
+ "dlc 0.8.0",
  "lightning",
  "secp256k1-zkp",
 ]
@@ -397,7 +421,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "47aa81134f4420eec871d0df562dee2fdcd63992bd935b9ab572e8ab50e90eb7"
 dependencies = [
  "bitcoin",
- "dlc",
+ "dlc 0.7.1",
  "secp256k1-zkp",
 ]
 
@@ -1146,9 +1170,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.48.0"
+version = "1.53.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ff360e02eab121e0bc37a2d3b4d4dc622e6eda3a8e5253d5435ecf5bd4c68408"
+checksum = "202caea871b69668250d242070849eb495be178ed697a3e98aebce5bc81a0bed"
 dependencies = [
  "pin-project-lite",
 ]
