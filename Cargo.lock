@@ -8,9 +8,9 @@ version = "1.0.11-beta"
 dependencies = [
  "async-trait",
  "crossbeam",
- "dlc",
+ "dlc 0.7.1",
  "dlc-manager",
- "dlc-messages",
+ "dlc-messages 0.8.0",
  "env_logger",
  "idna",
  "log",
@@ -94,7 +94,7 @@ checksum = "9035ad2d096bed7955a320ee7e2230574d28fd3c3a0f186cbea1ff3c7eed5dbb"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -160,7 +160,7 @@ dependencies = [
  "regex",
  "rustc-hash",
  "shlex",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -346,7 +346,7 @@ checksum = "97369cbbc041bc366949bc74d34658d6cda5621039731c6310521892a3a20ae0"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -362,6 +362,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "dlc"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "329a66c9207135f9f2aaf676adde16d6ab752f3322653b28eedf127cb3d65b61"
+dependencies = [
+ "bitcoin",
+ "miniscript",
+ "secp256k1-sys",
+ "secp256k1-zkp",
+]
+
+[[package]]
 name = "dlc-manager"
 version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -369,8 +381,8 @@ checksum = "77e08192b67d858d5c7179afec81e34fcfcb4e7339c018beadbd0eeccb0f80da"
 dependencies = [
  "async-trait",
  "bitcoin",
- "dlc",
- "dlc-messages",
+ "dlc 0.7.1",
+ "dlc-messages 0.7.1",
  "dlc-trie",
  "hex-conservative 0.1.2",
  "lightning",
@@ -385,7 +397,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2720ffe49ba9d5427653d9694ef9b4af23b05d827f6433a588c85adf56335a3"
 dependencies = [
  "bitcoin",
- "dlc",
+ "dlc 0.7.1",
+ "lightning",
+ "secp256k1-zkp",
+]
+
+[[package]]
+name = "dlc-messages"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4a105adfdef022a985d7c4519b0ba05156e8e833fbd2378169792277029755fe"
+dependencies = [
+ "bitcoin",
+ "dlc 0.8.0",
  "lightning",
  "secp256k1-zkp",
 ]
@@ -397,7 +421,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "47aa81134f4420eec871d0df562dee2fdcd63992bd935b9ab572e8ab50e90eb7"
 dependencies = [
  "bitcoin",
- "dlc",
+ "dlc 0.7.1",
  "secp256k1-zkp",
 ]
 
@@ -616,7 +640,7 @@ checksum = "1ec89e9337638ecdc08744df490b221a7399bf8d164eb52a665454e60e075ad6"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -676,7 +700,7 @@ checksum = "199b7932d97e325aff3a7030e141eafe7f2c6268e1d1b24859b753a627f45254"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -811,7 +835,7 @@ checksum = "a948666b637a0f465e8564c73e89d4dde00d72d4d473cc972f390fc3dcee7d9c"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -870,7 +894,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "64d1ec885c64d0457d564db4ec299b2dae3f9c02808b8ad9c3a089c591b18033"
 dependencies = [
  "proc-macro2",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -1065,7 +1089,7 @@ checksum = "243902eda00fad750862fc144cea25caca5e20d615af0a81bee94ca738f1df1f"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -1104,6 +1128,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "syn"
+version = "3.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "53e9bae58849f64dfa4f5d5ae372c8341f7305f82a3868709269343628b659a3"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
+]
+
+[[package]]
 name = "synstructure"
 version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1111,27 +1146,27 @@ checksum = "c8af7666ab7b6390ab78131fb5b0fce11d6b7a6951602017c35fa82800708971"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
 name = "thiserror"
-version = "2.0.17"
+version = "2.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f63587ca0f12b72a0600bcba1d40081f830876000bb46dd2337a3051618f4fc8"
+checksum = "ec86235f5fcc2a73650310756d2ac5b138a5780bbbdfae3eeccec992c435ba4f"
 dependencies = [
  "thiserror-impl",
 ]
 
 [[package]]
 name = "thiserror-impl"
-version = "2.0.17"
+version = "2.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3ff15c8ecd7de3849db632e14d18d2571fa09dfc5ed93479bc4485c7a517c913"
+checksum = "bc04cd3e1236dd4a98afca4569f2deb3f120e5422a4023be2cb683f8486292af"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 3.0.3",
 ]
 
 [[package]]
@@ -1309,7 +1344,7 @@ checksum = "2380878cad4ac9aac1e2435f3eb4020e8374b5f13c296cb75b4620ff8e229154"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
  "synstructure",
 ]
 
@@ -1331,7 +1366,7 @@ checksum = "fa4f8080344d4671fb4e831a13ad1e68092748387dfc4f55e356242fae12ce3e"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
 
 [[package]]
@@ -1351,7 +1386,7 @@ checksum = "595eed982f7d355beb85837f651fa22e90b3c044842dc7f2c2842c086f295808"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
  "synstructure",
 ]
 
@@ -1380,5 +1415,5 @@ checksum = "6eafa6dfb17584ea3e2bd6e76e0cc15ad7af12b09abdd1ca55961bed9b1063c6"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.100",
 ]
